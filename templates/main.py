@@ -132,7 +132,7 @@ async def preview_report(request: Request) -> HTMLResponse:
 async def preview_report_with_logo(request: Request) -> HTMLResponse:
     """Preview del reporte con logo (el logo se sirve por URL en la web)."""
     return templates.TemplateResponse(
-        request=request,vkjcsnoikbg
+        request=request,
         name="templates/report_logo.html",
         context={
             "title": "Catalogo de Productos",
