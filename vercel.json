@@ -1,17 +1,14 @@
 {
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.py"
+      "src": "main.py",
+      "use": "@vercel/python",
+      "config": {
+        "includeFiles": ["templates/**", "assets/**"]
+      }
     }
   ],
-  "functions": {
-    "api/index.py": {
-      "includeFiles": [
-        "templates/**",
-        "index.html",
-        "report.html"
-      ]
-    }
-  }
+  "routes": [
+    { "src": "/(.*)", "dest": "main.py" }
+  ]
 }
